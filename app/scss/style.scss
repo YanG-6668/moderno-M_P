@@ -143,9 +143,10 @@
     }
 }
 .products__inner-box {
-     display: flex;
-     justify-content: space-between;
-     flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
 }
 .product__item {
     max-width: 442px;
@@ -162,9 +163,9 @@
     &-content{
         display: flex;
         justify-content: space-between;
+        align-items: center;
         padding: 10px 30px;
         min-height: 90px;
-        align-items: center;
         font-weight: 500;
         border-bottom: 1px solid #e7ecf2;
     }
@@ -175,7 +176,7 @@
         color: $bg;
         font-size: 18px;
         display: block;
-        padding-bottom: 10px;
+        padding-bottom: 12px;
     }
     &-category{
         font-size: 14px;
@@ -191,12 +192,14 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        min-height: 70px;
+        height: 70px;
         padding: 10px 30px;
     }
     &-author{
         display: flex;
         align-items: center;
+        max-width: 245px;
+        width: 100%;
         .avatar{
             width: 30px;
             height: 30px;
@@ -205,12 +208,18 @@
             display: inline-block;
             background-repeat: no-repeat;
             background-size: cover;
-            margin-right: 14px;  
+            margin-right: 10px;  
         }
         span{
             font-size: 14px;
             font-weight: 500;
                   
+        }
+    }
+    &-star{
+        font-size: 12px;
+        span{
+            color: $bg;
         }
     }
 
@@ -233,8 +242,41 @@
     }
 }
 
-  
-
 /*end products*/
 
 
+//product__slider start
+
+.product__slider{
+    text-align: center;
+    padding: 110px 0 120px;
+    .slick-dots{
+        text-align: center;
+        margin-top: 50px;
+        li{
+            display: inline-block;
+            margin-left: 3px;
+            margin-right: 3px;
+            &.slick-active{
+                button{
+                background-color: $green;
+                }
+            }
+            button{
+                border-radius: 50%;
+                background-color: rgb(232, 232, 232);
+                border: none;
+                font-size: 0;
+                width: 16px;
+                height: 16px;
+                cursor: pointer;
+                outline: none;
+            }
+        }
+    }
+}
+
+// end product__slider
+
+
+  
